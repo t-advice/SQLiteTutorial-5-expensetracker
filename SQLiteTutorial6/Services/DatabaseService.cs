@@ -12,5 +12,10 @@ namespace SQLiteTutorial6.Services
     {
         private readonly SQLiteAsyncConnection _database; // SQLite asynchronous connection
 
+        public DatabaseService(string dbPath) // Constructor that initializes the database connection
+        {
+            _database = new SQLiteAsyncConnection(dbPath);
+        }
+
     }
 }
