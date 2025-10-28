@@ -23,5 +23,14 @@ namespace SQLiteTutorial6.Services
             return _database.Table<Expense>().OrderByDescending(e => e.Date).ToListAsync();
         }
 
+        public Task<int>SaveExpenseAsync(Expense expense) // Save or update an expense record
+        {
+            if (expense.Id != 0) // If the expense has an Id, update the existing record
+                return _database.UpdateAsync(expense);
+            else // Otherwise, insert a new record
+                return _database.InsertAsync(expense);
+        }
+
+
     }
 }
