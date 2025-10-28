@@ -7,7 +7,7 @@ using SQLiteTutorial6.Models;
 
 namespace SQLiteTutorial6.Services
 {
-    public class DatabaseService
+    public  class DatabaseService
     {
 
     }
