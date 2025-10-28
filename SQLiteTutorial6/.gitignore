@@ -1,0 +1,32 @@
+﻿
+---
+
+### 📄 **.gitignore**
+
+```gitignore
+# Build results
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Generated files
+*.db
+*.db-shm
+*.db-wal
+
+# VS Code / Rider / MAUI specific
+.vs/
+.idea/
+*.DS_Store
+*.vscode/
+*.apk
+*.aab
+
+# User settings
+*.swp
+*.bak
+*.log
+*.temp
