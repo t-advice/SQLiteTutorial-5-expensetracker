@@ -31,6 +31,11 @@ namespace SQLiteTutorial6.Services
                 return _database.InsertAsync(expense);
         }
 
+        public Task<int> DeleteExpenseAsync(Expense expense) // Delete an expense record
+        {
+            return _database.DeleteAsync(expense); // Delete the specified expense from the database
+        }
+
 
     }
 }
