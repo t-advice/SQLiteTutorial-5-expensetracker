@@ -8,7 +8,7 @@ using SQLite;
 
 namespace SQLiteTutorial6.Models
 {
-    public class Expense
+    public class Expense // Represents an expense record in the database
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLiteTutorial6.Models;
+using SQLite;
 
 namespace SQLiteTutorial6.Services
 {
     public  class DatabaseService
     {
+        private readonly SQLiteAsyncConnection _database; // SQLite asynchronous connection
 
     }
 }
