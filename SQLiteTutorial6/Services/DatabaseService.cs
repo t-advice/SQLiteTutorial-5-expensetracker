@@ -15,6 +15,12 @@ namespace SQLiteTutorial6.Services
         public DatabaseService(string dbPath) // Constructor that initializes the database connection
         {
             _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Expense>().Wait(); // Create the Expense table if it doesn't exist
+        }
+
+        public Task<List<Expense>>GetExpensesAsync() // Retrieve all expenses ordered by date descending
+        {
+            return _database.Table<Expense>().OrderByDescending(e => e.Date).ToListAsync();
         }
 
     }
